@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -62,5 +63,9 @@ public class MainActivity extends AppCompatActivity {
     public void deleteMovies(View v) {
         daoSession.getPeliculaDao().deleteAll();
         daoSession.getActorDao().deleteAll();
+    }
+
+    public void activarTodo(View v){
+        Toast.makeText(this, "Ingresando", Toast.LENGTH_SHORT).show();
     }
 }
